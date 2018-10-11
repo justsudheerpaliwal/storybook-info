@@ -1,3 +1,16 @@
+# Tiny tweak of (https://github.com/storybooks/storybook/blob/master/addons/info)
+
+# what needs to be done differently
+proptables will only be generated if they are provided like :
+
+```js
+withInfo({
+  propTables: [Component1, Component2]
+})(() => return <YourStuff />)
+```
+
+generates propTables for ```component1``` and ```component2```
+
 # Storybook Info Addon
 
 Storybook Info Addon will show additional information for your stories in [Storybook](https://storybook.js.org).
@@ -10,7 +23,7 @@ Useful when you want to display usage or other types of documentation alongside 
 Install the following npm module:
 
 ```sh
-npm i -D @storybook/addon-info
+npm i -D storybook-info
 ```
 
 ## Basic usage
@@ -184,16 +197,10 @@ In order, all of them will be combined together, with a later call overriding th
   source: boolean,
   /**
    * Components used in story
-   * Displays Prop Tables with these components
+   * Displays Prop Tables with these components, proptables are generated only if propTables are provided
    * @default []
    */
   propTables: Array<React.ComponentType>,
-  /**
-   * Exclude Components from being shown in Prop Tables section
-   * Accepts an array of component classes or functions
-   * @default []
-   */
-  propTablesExclude: Array<React.ComponentType>,
   /**
    * Overrides styles of addon. The object should follow this shape:
    * https://github.com/storybooks/storybook/blob/master/addons/info/src/components/Story.js#L19.
@@ -336,7 +343,7 @@ storiesOf('Button', module).add('with text', () => <Button>Hello Button</Button>
 ### React Docgen Integration
 
 React Docgen is included as part of the @storybook/react package through the use of `babel-plugin-react-docgen` during babel compile time.
-When rendering a story with a React component commented in this supported format, the Addon Info description will render the comments above the component declaration and the prop table will display the prop's comment in the description column.
+When rendering a story with a React component commented in this supported format, the Addon Info description will render the comments above the component declaration and the prop table will display the prop's comment in the description column if propTables are specified in the options.
 
 ```js
 import React from 'react';
