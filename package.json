@@ -1,6 +1,6 @@
 {
   "name": "storybook-info",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "inspired by @storybook/addon-info , solves a few problems with the original one",
   "main": "lib/index.js",
   "scripts": {
