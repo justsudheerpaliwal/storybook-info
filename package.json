@@ -1,0 +1,28 @@
+{
+  "name": "storybook-info",
+  "version": "0.1.0",
+  "description": "inspired by @storybook/addon-info , solves a few problems with the original one",
+  "main": "src/index.js",
+  "dependencies": {
+    "@emotion/styled": "^0.10.6",
+    "@storybook/addons": "4.0.0-alpha.24",
+    "@storybook/client-logger": "4.0.0-alpha.24",
+    "@storybook/components": "4.0.0-alpha.24",
+    "core-js": "2.5.7",
+    "global": "^4.3.2",
+    "marksy": "^6.0.3",
+    "nested-object-assign": "^1.0.1",
+    "prop-types": "^15.6.2",
+    "react-addons-create-fragment": "^15.5.3",
+    "react-lifecycles-compat": "^3.0.4",
+    "util-deprecate": "^1.0.2"
+  },
+  "devDependencies": {
+    "react-test-renderer": "^16.4.2"
+  },
+  "peerDependencies": {
+    "react": "*"
+  },
+  "author": "sudheer singh",
+  "license": "MIT"
+}
