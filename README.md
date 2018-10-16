@@ -1,4 +1,4 @@
-# Tiny tweak of (https://github.com/storybooks/storybook/blob/master/addons/info)
+# Tiny tweak of [Storybook/addon-info](https://github.com/storybooks/storybook/blob/master/addons/info)
 
 # what needs to be done differently
 proptables will only be generated if they are provided like :
